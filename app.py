@@ -6,7 +6,7 @@ import time
 import gdown, os
 
 if not os.path.exists("similarity.pkl"):
-    url = "https://drive.google.com/uc?id=<your-file-id>"
+    url = "https://drive.google.com/file/d/1IHrNzob0OmfBXXGCsK08txrRgQc1B4L2/view?usp=sharing"
     gdown.download(url, "similarity.pkl", quiet=False)
 # Load data
 
