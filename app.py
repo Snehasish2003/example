@@ -3,8 +3,14 @@ import pickle
 import pandas as pd
 import requests
 import time
+import gdown, os
 
+if not os.path.exists("similarity.pkl"):
+    url = "https://drive.google.com/uc?id=<your-file-id>"
+    gdown.download(url, "similarity.pkl", quiet=False)
 # Load data
+
+
 movies_list = pickle.load(open('movie_list.pkl','rb'))
 movies = pd.DataFrame(movies_list)
 similarity = pickle.load(open('similarity.pkl','rb'))
